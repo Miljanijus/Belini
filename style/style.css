@@ -1,0 +1,1033 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+*{
+    margin: 0;
+    scroll-behavior: smooth;
+    
+}
+html{
+    height: -webkit-fill-available;
+}
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    height: -webkit-fill-available;
+}
+::-webkit-scrollbar{
+    background-color: none;
+}
+/*Header*/
+.header{
+    width: 100%;
+    height: 55px;
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    z-index: 10;
+}
+.navigation{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.kontakt-navigation{
+    width: 100%;
+    height: 45px;
+    background-color: rgb(92, 0, 0);
+    display: flex;
+    justify-content: center;
+}
+.kontakt-navigation.hide{
+    visibility: hidden;
+}
+.d-mreze{
+    width: 25%;
+    height: 100%;
+
+}
+.button-f{
+    width: 45px;
+    height: 40px;
+    margin-left: 45px;
+    line-height: 40px;
+    background-color: transparent;
+    border: 0;
+}
+#button-f{
+    margin-left: 0px;
+}
+.button-f i{
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+}
+.button-i{
+    width: 45px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    background-color: transparent;
+    border: 0;
+}
+.button-i i{
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 40px;
+    cursor: pointer;
+}
+.button-w{
+    width: 45px;
+    height: 40px;
+    margin-left: 20px;
+    line-height: 40px;
+    background-color: transparent;
+    border: 0;
+}
+.button-w i{
+    font-size: 25px;
+    color: #ffffff;
+    line-height: 40px;
+    cursor: pointer;
+}
+.popup{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    background-color: #ffffff;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+}
+.popup p{
+    margin-top: 10px;
+    color: #000000;
+    font-size: 14px;
+    font-weight: bold;
+}
+.button-w:hover .popup{
+    visibility: visible;
+}
+.centar{
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.centar a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform:capitalize;
+    line-height: 40px;
+}
+.k-podaci{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.k-podaci .ime{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 35px;
+}
+.k-podaci .telefon1{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 35px;
+}
+.navi{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);  
+}
+.navi.black{
+    position: absolute;
+    top: 0;
+    transform: translateY(0);
+    transition: 0.5s all;
+}
+.navi .logo{
+    width: 40%;
+    height: 50%;
+    left: 0%; 
+}
+.navi.opacity{
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.navi .links{
+    width: 50%;
+    height: 50%;
+    justify-content: center;
+    text-align: center;
+    right: 0;
+}
+.logo a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform:capitalize;
+}
+.navi .links ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+.navi .links ul li{
+    margin-left: 70px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+.navi .links ul li a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 50px;
+    position: relative;
+} 
+.navi .links ul li a::before{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 110%;
+    right: 0; 
+    transition: all 0.8s ease;
+    
+}
+.navi .links ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+.navi .links ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+.hamburger{
+    position: absolute;
+    width: 40px;
+    height: 45px;
+    left: 0;
+    color: #ffffff;
+    line-height: 50px;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    top: 0;
+    display: none;
+}
+/*Section 1*/
+.section1{
+    width: 100vw;
+    height: 100vh;
+    background: url(../slike/IMG-10.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.pocetna{
+    width: 100%;
+    height: 100%;
+}
+.text{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.email{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    align-items: center;
+    justify-content: center;
+    border-bottom-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: none;
+}
+.btnClose2{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: none;
+    opacity: 0.8;
+    outline: none;
+}
+.h1{
+    width: 100%;
+    height: 60%;
+    position: relative;
+    text-align: center;
+    padding-top: 70px;
+}
+.h1 h1{
+    color: #ffffff;
+    font-size: 50px;
+}
+.button{
+    width: 100%;
+    height: 40%;
+    justify-content: center;
+    align-content: center;
+    text-align: center
+}
+.btnKontakt{
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 1px 8px 1px rgb(255, 255, 255);
+    border: 0;
+    font-size: 16px;
+    padding: 8px;
+    color: #ffffff;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.btnKontakt:hover{
+    box-shadow: 0 2px 9px 2px rgb(255, 255, 255);
+    transform: scale(1.05);
+}
+/*sekcija2*/
+.section2{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(102, 78, 78, 0.5) 0%, rgba(255,255,255,1) 100%);
+}
+.druga-strana{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ime-strane{
+    width: 20%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 110%;
+    left: 0;
+}
+.ime-strane h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 15px;
+}
+.ime-strane h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    top: 70%;
+    left: 0;
+}
+.o-nama{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    position: relative;
+    align-items: center;
+}
+.text1{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.text1 h1{
+    font-size: 20px;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px;
+}
+.text1 p{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 15px 8px 15px;
+}
+/*sekcija 3*/
+.section3{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle rgba(255, 255, 255, 0.5) 0%, rgba(102, 78, 78, 1) 100%);
+}
+.treca-strana{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ime-strane1{
+    width: 19%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 210%;
+    right: 0;
+}
+.ime-strane1 h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 15px;
+}
+.ime-strane1 h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    top: 70%;
+    left: 0;
+}
+.kamen{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+.kamen1{
+    width: 25%;
+    height: 60%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.kamen1:hover{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: 0.8s all ease;
+}
+.cigla{
+    width: 25%;
+    height: 60%;
+    margin-left: 20%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.cigla:hover{
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    transition: 0.8s all ease;
+}
+.slika2{
+    width: 100%;
+    height: 70%;
+    background: url(../slike/IMG-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.text2{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.text2 h1{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 50px;
+}
+.slika3{
+    width: 100%;
+    height: 70%;
+    background: url(../slike/IMG-28.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+.text3{
+    width: 100%;
+    height: 30%;
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.text3 h1{
+    text-align: center;
+    font-size: 22px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #000000;
+    margin-top: 50px;
+}
+/*Sekcija 4*/
+.section4{
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(102, 78, 78, 0.5) 0%, rgba(255,255,255,1) 100%);
+}
+.galerija{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ime-strane2{
+    width: 20%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 310%;
+    left: 0;
+}
+.ime-strane2 h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 15px;
+}
+.ime-strane2 h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    top: 70%;
+    left: 0;
+}
+.galerija-slike{
+    width: 60%;
+    height: 80%;
+    background-color: rgba(255,255,255,0.7);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: relative;
+    justify-content:space-around;
+    overflow-y: scroll;
+}
+.picture{
+    width: 220px;
+    height: 260px;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+    box-sizing: border-box;
+}
+.picture:hover{
+    transform: scale(1.04);
+    transition: 0.5s all ease-in;
+}
+.picture1, .picture2, .picture3,
+.picture4, .picture5, .picture6,
+.picture7, .picture8, .picture9,
+.picture10, .picture11, .picture12, 
+.picture13, .picture14, .picture15,
+.picture16, .picture17, .picture18,
+.picture19, .picture20, .picture21,
+.picture22, .picture23, .picture24,
+.picture25, .picture26, .picture27,
+.picture28, .picture29, .picture30,
+.picture31{
+    width: 100%;
+    height: 100%;
+}
+.picture1{
+    background: url(../slike/IMG-1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture2{
+    background: url(../slike/IMG-2.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture3{
+    background: url(../slike/IMG-3.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture4{
+    background: url(../slike/IMG-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture5{
+    background: url(../slike/IMG-5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture6{
+    background: url(../slike/IMG-6.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture7{
+    background: url(../slike/IMG-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture8{
+    background: url(../slike/IMG-8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture9{
+    background: url(../slike/IMG-9.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture10{
+    background: url(../slike/IMG-10.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture11{
+    background: url(../slike/IMG-11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture12{
+    background: url(../slike/IMG-12.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture13{
+    background: url(../slike/IMG-13.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture14{
+    background: url(../slike/IMG-14.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture15{
+    background: url(../slike/IMG-15.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture16{
+    background: url(../slike/IMG-16.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture17{
+    background: url(../slike/IMG-17.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture18{
+    background: url(../slike/IMG-18.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture19{
+    background: url(../slike/IMG-19.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture20{
+    background: url(../slike/IMG-20.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture21{
+    background: url(../slike/IMG-21.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture22{
+    background: url(../slike/IMG-22.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture23{
+    background: url(../slike/IMG-23.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture24{
+    background: url(../slike/IMG-24.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture25{
+    background: url(../slike/IMG-25.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture26{
+    background: url(../slike/IMG-26.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture27{
+    background: url(../slike/IMG-27.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture28{
+    background: url(../slike/IMG-28.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture29{
+    background: url(../slike/IMG-29.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture30{
+    background: url(../slike/IMG-30.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.picture31{
+    background: url(../slike/IMG-31.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Section 5*/
+.section5{
+    width: 100vw;
+    height: 60vh;
+    background-color: #ffffff;
+}
+.podaci{
+    width:100%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.kontakt{
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 70px;
+}
+.adresa{
+    width:30%;
+    height: 100%;
+    align-items: center;
+    text-align: center;
+}
+.adresa h1{
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+.adresa h2{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+.info{
+    width: 100%;
+    height: 40%;
+    align-items: center;
+    text-align: center;
+}
+.mreze{
+    width: 100%;
+    height: 20%;
+    justify-content: space-around;
+    align-items: center;
+}
+.mapa{
+    width: 70%;
+    height: 100%;
+}
+.mapa iframe{
+    width: 100%;
+    height: 100%;
+}
+.ime-strane3{
+    width: 100%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 400%;
+    right: 0;
+}
+.ime-strane3 h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-top: 15px;
+}
+.ime-strane3 h1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #ffffff;
+    top: 70%;
+    left: 0;
+}
+/*Modalni prozor za kamen*/
+.informacije1{
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    top: 10%;
+    left: 20%;
+    transform: translate(-0%,-0%);
+}
+.kamen-slika{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+    background: radial-gradient(circle rgba(255, 255, 255, 0.5) 0%, rgba(102, 78, 78, 1) 100%);
+}
+.slika4, .slika5, .slika6{
+    width: 20%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.slika4{
+    background: url(../slike/IMG-4.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slika5{
+    background: url(../slike/IMG-7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slika6{
+    background: url(../slike/IMG-8.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.kamen-opis{
+    width: 100%;
+    height: 50%;
+    justify-items: center;
+    text-align: center;
+}
+.kamen-text{
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 10%;
+    position: relative;
+    text-align: center;
+    justify-content:center;
+}
+.kamen-text p{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.btnClose{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: none;
+    opacity: 0.8;
+    outline: none;
+}
+/*Cigla modalni prozor*/
+.informacije2{
+    width: 60%;
+    height: 80%;
+    background-color: #ffffff;
+    box-shadow: 10px 5px 10px 5px rgba(0, 0, 0, 0.5);
+    display: none;
+    top: 10%;
+    left: 20%;
+    transform: translate(-0%,-0%);
+}
+.cigla-slika{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    justify-items: center;
+    text-align: center;
+    background: radial-gradient(circle rgba(255, 255, 255, 0.5) 0%, rgba(102, 78, 78, 1) 100%);
+}
+.slika7, .slika8, .slika9{
+    width: 20%;
+    height: 100%;
+    background-color: #ffffff;
+}
+.slika7{
+    background: url(../slike/IMG-11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slika8{
+    background: url(../slike/IMG-21.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slika9{
+    background: url(../slike/IMG-12.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cigla-opis{
+    width: 100%;
+    height: 50%;
+    justify-items: center;
+    text-align: center;
+}
+.cigla-text{
+    width: 80%;
+    height: 60%;
+    left: 10%;
+    top: 10%;
+    position: relative;
+    text-align: center;
+    justify-content:center;
+}
+.cigla-text p{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.btnClose1{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 20px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border: none;
+    opacity: 0.8;
+    outline: none;
+}
